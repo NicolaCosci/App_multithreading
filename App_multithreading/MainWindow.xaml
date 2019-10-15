@@ -10,11 +10,28 @@
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF0068FF" Offset="0"/>
-                <GradientStop Color="Red" Offset="1"/>
+                <GradientStop Color="#FFEAA7A7" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="lbl_risultato" Content="" HorizontalAlignment="Left" Height="45" Margin="245,135,0,0" VerticalAlignment="Top" Width="245"/>
-        <Button x:Name="btn_task" Content="CLICK" HorizontalAlignment="Left" Height="50" Margin="245,255,0,0" VerticalAlignment="Top" Width="225" Click="btn_task_Click"/>
+        <Label x:Name="lbl_risultato" Content="" HorizontalAlignment="Left" Height="45" Margin="25,130,0,0" VerticalAlignment="Top" Width="225" Background="White"/>
+        <Button x:Name="btn_task" Content="CLICK" HorizontalAlignment="Left" Height="50" Margin="25,260,0,0" VerticalAlignment="Top" Width="225" Click="btn_task_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF1B39F3" Offset="0"/>
+                    <GradientStop Color="#FF00FF3A" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_conta" Content="CLICK" HorizontalAlignment="Left" Height="50" Margin="515,260,0,0" VerticalAlignment="Top" Width="205" Click="btn_conta_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF7400FF" Offset="0"/>
+                    <GradientStop Color="#FFFF1212" Offset="1"/>
+                    <GradientStop Color="#FFAD079C" Offset="0.447"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lbl_conta" Content="" HorizontalAlignment="Left" Height="45" Margin="515,130,0,0" VerticalAlignment="Top" Width="205" Background="White"/>
 
     </Grid>
 </Window>

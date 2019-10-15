@@ -32,6 +32,16 @@ namespace App_multithreading
 
         }
 
+       
+
+        
+        private void btn_conta_Click(object sender, RoutedEventArgs e)
+        {
+
+            //DoWork();
+            Task.Factory.StartNew(DoCount);
+
+        }
         private void DoWork()
         {
             for (int i = 0; i <= 1000000; i++)
@@ -44,10 +54,26 @@ namespace App_multithreading
             //Aggiornainterfaccia();
             Dispatcher.Invoke(Aggiornainterfaccia);
         }
-
+        private void DoCount()
+        {
+            for (int i = 0; i <= 1000000; i++)
+            {
+                for (int j = 0; j <= 1000000; j++)
+                {
+                    Dispatcher.Invoke(() => Aggiornainterfaccia(i));
+                }
+            }
+            //Aggiornainterfaccia();
+            Dispatcher.Invoke(Aggiornainterfaccia);
+        }
         private void Aggiornainterfaccia()
         {
             lbl_risultato.Content = "finito";
         }
+        private void Aggiornainterfaccia(int j)
+        {
+            lbl_conta.Content = j.ToString();
+        }
+
     }
 }
