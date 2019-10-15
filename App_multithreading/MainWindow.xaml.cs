@@ -22,7 +22,7 @@ namespace App_multithreading
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void btn_task_Click(object sender, RoutedEventArgs e)
